@@ -4,15 +4,7 @@ function getComputerChoice(){
     return choices[choiceIndex];
 }
 
-function getPlayerChoice(){
-    const player_choice = prompt("Enter your choice (Rock/Paper/Scissors): ");
-    return player_choice.toLowerCase();
-}
-
 function playRound(playerChoice, computerChoice){
-    const round_choices = document.querySelector(".round_choices");
-
-    round_choices.textContent = `You chose ${playerChoice}. Computer chose ${computerChoice}`
     if(playerChoice == computerChoice)
         return "tie";
     
@@ -29,10 +21,9 @@ function playRound(playerChoice, computerChoice){
         return "lose" 
 }
 
-function game(){
+function game(playerChoice){
     let playerScore = computerScore = 0;
     while(playerScore < 5 && computerScore < 5){
-        let playerChoice = getPlayerChoice();
         let computerChoice = getComputerChoice();
         let result = playRound(playerChoice, computerChoice);
     
@@ -40,14 +31,24 @@ function game(){
             playerScore++;
         if(result == "lose")
             computerScore++;
-
+    //Function to show game history
+    //Function to show score
         alert(`You chose ${playerChoice}. Computer chose ${computerChoice}\n
         You: ${playerScore} Computer: ${computerScore}`);
-
+    //Function to show win
+    //Function to show play again button
         if(playerScore == 5)
             alert("You won!");
         else if(computerScore == 5)
             alert("Computer won!");
     }
 }
-game();
+
+//Event listeners for taking players input
+const choices = document.querySelectorAll(".choice");
+choices.forEach(choice => choice.addEventListener("click", takeInput));
+
+function takeInput(){
+    const playerChoice = this.getAttribute("class").split(" ")[1];
+    game(playerChoice);
+}

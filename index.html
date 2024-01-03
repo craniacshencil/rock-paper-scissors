@@ -4,8 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>  
+    <link rel = "stylesheet" href = "style.css">
+    <script defer src = "script.js"></script>
 </head>
 <body>
+    <div class = "header">
+        <h1>Rock-Paper-Scissors</h1>
+    </div>
+
+    <div class = "choiceContainer">
+        <div class = "choice rock"><img class = "rockImage image"src = "images/rock.png" alt = "rock" width = 180 height = 180></div>
+        <div class = "choice paper"><img class = "paperImage image"src = "images/paper.png" alt = "paper" height = 200 weight = 200></div>
+        <div class = "choice scissors"><img class = "scissorsImage image"src = "images/scissors.png" alt = "scissors" height = 200 weight = 200></div> 
+    </div>
+
+    <div class = scoreTally></div>
+
+    <div class = scoreHistory></div>
+    
+    <div class = "Footer"></div>
 </body>
-<script src = "consoleLogic.js"></script>
+<script src = "consoleLogic.js" defer></script>
 </html>

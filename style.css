@@ -1,0 +1,28 @@
+body{
+    background: #91a6bb;
+    margin: 0;
+}
+.choiceContainer{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.choice {
+    width: 200px;
+    height: 200px; border: 2px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice:hover{
+    min-width: 225px;
+    min-height: 225px;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.choice:active{
+    background: #3c7bba;
+}
