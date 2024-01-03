@@ -1,11 +1,22 @@
 body{
     background: #91a6bb;
+    text-align: center;
     margin: 0;
+    font-family: serif;
+}
+.header{
+    color: white;
+    background: #102030;
+    font-family: "Merienda";
+    margin: 0px;
+    padding: 1px;
+    font-size: 28px;
 }
 .choiceContainer{
     display: flex;
     justify-content: center;
     gap: 40px;
+    margin: 40px;
 }
 .choice {
     width: 200px;
@@ -19,10 +30,32 @@ body{
     min-width: 225px;
     min-height: 225px;
     border: 2px solid white;
+    background: #3c7bba;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .choice:active{
-    background: #3c7bba;
+    background: #102030;
+}
+/* Score tally styling */
+.scoreTally{
+    display: flex;
+    flex-direction: column;
+    border: 2px solid black;
+}
+.scoreboard{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.playerPart,
+.computerPart{
+    display: flex;
+    flex-direction: column;
+}
+
+.computerLabel{
+    margin-top: 30px;
 }

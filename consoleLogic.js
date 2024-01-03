@@ -20,7 +20,26 @@ function playRound(playerChoice, computerChoice){
     else
         return "lose" 
 }
+function displayScores(playerScore, computerScore){
+    let scoreTally = document.querySelector(".scoreTally");
+    let scoreTallyTitle = document.createElement("span");
+    scoreTallyTitle.style.fontSize = "36px";
+    scoreTallyTitle.textContent = "SCORES";
+    scoreTallyTitle.style.textAlign = "center";
+    scoreTally.appendChild(scoreTallyTitle);
 
+    let playerLabel = document.createElement("span");
+    let playerScore = document.createElement("span");
+    playerLabel.textContent = "You";
+    playerScore.textContent = playerScore;
+
+    let computerLabel = document.createElement("span");
+    let computerScore = document.createElement("span");
+    computerLabel.textContent = "Computer";
+    computerScore.textContent = computerScore;
+
+    let document
+}
 function game(playerChoice){
     let playerScore = computerScore = 0;
     while(playerScore < 5 && computerScore < 5){
@@ -45,10 +64,10 @@ function game(playerChoice){
 }
 
 //Event listeners for taking players input
-const choices = document.querySelectorAll(".choice");
-choices.forEach(choice => choice.addEventListener("click", takeInput));
+//const choices = document.querySelectorAll(".choice");
+//choices.forEach(choice => choice.addEventListener("click", takeInput));
 
-function takeInput(){
-    const playerChoice = this.getAttribute("class").split(" ")[1];
-    game(playerChoice);
-}
+//function takeInput(){
+  //  const playerChoice = this.getAttribute("class").split(" ")[1];
+ //   game(playerChoice);
+//}
