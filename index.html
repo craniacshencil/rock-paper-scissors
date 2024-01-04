@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>  
+    <title>Rock-Paper-Scissors</title>  
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Merienda">
     <link rel = "stylesheet" href = "style.css">
     <script defer src = "consoleLogic.js" defer></script>
 </head>
 <body>
-    <div class = "header">
+    <header> 
         <h1>Rock-Paper-Scissors</h1>
-    </div>
+    </header>
 
     <div class = "choiceContainer">
         <div class = "choice rock"><img class = "rockImage image"src = "images/rock.png" alt = "rock" width = 180 height = 180></div>
@@ -27,7 +27,11 @@
                 <span>You</span>
             </div>
             <div class = "playerScore">-</div>
-            <div class = "VS">VS</div>
+            <div class = "scorecardCenter">
+                <div class = "winnerLabel"></div>
+                <div class = "VS">VS</div>
+                <div class = "playAgain"></div>
+            </div>
             <div class = "computerScore">-</div>
             <div class = "computerPart">
                 <img src = "images/computer.png" alt = "computer image" width = 170px height = 170px>
@@ -37,6 +41,6 @@
     </div>
     <div class = scoreHistory></div>
     
-    <div class = "Footer"></div>
+    <footer></footer>
 </body>
 </html>
